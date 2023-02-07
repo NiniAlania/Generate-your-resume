@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/HelveticaNeue.ttc') format('truetype');
+  }
+:root {
+    --primary-color: #1a1a1a;
+    --primary-font: 'MyFont';
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+main .background {
+    Width: 1920px;
+    Height: 1080px;
+    background-image: url('./assets/background.png');
+    /* display: grid;
+    grid-template-rows: 1fr 5fr; */
+}
+
+main .background .top {
+    width: 100%;
+    height: 80px;
+}
+main .background .top .logo-redberry {
+    width: 236px;
+    height: 38px;
+    position: absolute;
+    top: 25px;
+    left: 70px;
+}
+
+main .background .top hr {
+    position: absolute;
+    margin-left: 70px;
+    width: 1780px;
+    margin-top: 89px;
+    color: var(--primary-color)
+}
+
+main .background .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+}
+
+main .background .bottom button {
+    width: 464px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    position:  absolute;
+    margin-bottom: 80px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24,42px;
+    border: 0px;
+}
+
+main .background .bottom img {
+    position: relative;
+    width: 299px;
+    height: 299px;
+    left: 265.5px ;
+    top: 42.5px;
+    background-blend-mode: multiply;
+}
