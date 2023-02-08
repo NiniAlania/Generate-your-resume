@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/HelveticaNeue.ttc') format('truetype');
+  }
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #FFFFFF;
+    --primary-font: 'MyFont';
+}
+
+body { 
+    margin:  0px;
+    padding: 0px;
+}
+
+.gen-info {
+    Width: 1920px;
+    Height: 1080px;
+    display:  flex;
+    justify-content: center;
+}
+
+.gen-info .left {
+    width: 1098px;
+    background-color: #F9F9F9;
+
+}
+
+.gen-info .left header {
+    display: flex;
+}
+
+.gen-info .left header .header-left {
+    width: 71.21px;
+    border-radius: 50%;
+}
+
+.gen-info .left header .header-left div {
+    width: 40px;
+    height: 40px;
+    margin-top: 45px;
+    margin-left: 48px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gen-info .left header .header-left img {
+    width: 9.21px;
+    height: 16px;
+    
+}
+
+.gen-info .left header .header-right .top { 
+    display: flex;
+    gap: 592px;
+}
+
+.gen-info .left header .header-right .top h3 {
+    width: 179px;
+    height: 29px;
+    margin-top:  47px;
+    margin-left:  77.79px;
+    font-size: 24px;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-weight: 700;
+    line-height: 29.3px;
+}
+
+.gen-info .left header .header-right .top h5 {
+    width: 29px;
+    height: 24px;
+    margin-top: 49px;
+    font-size: 20px;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    line-height: 23.86px;
+}
+
+.gen-info .left header .header-right .bottom hr {
+    width: 798px;
+    margin-left: 75px;
+}
+
+.gen-info .left main {
+    width: 798px;
+    margin-left: 150px;
+}
+
+.gen-info .left main .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+}
+
+.gen-info .left main .top aside label {
+    display: block;
+    margin-top: 60px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+}
+
+.gen-info .left main .top aside input {
+    margin-top: 8px;
+    width: 371px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    border: 1px solid #BCBCBC;
+    padding-left: 16px;
+
+}
+
+.gen-info .left main .top aside h6,
+.gen-info .left main .bottom aside h6 {
+    margin-top: 8px;
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #2e2e2e;
+}
+
+.gen-info .left main .bottom .photo {
+    margin: 54px 0px ;
+    display: flex;
+}
+
+.gen-info .left main .bottom .photo h4 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.98px;
+    color: var(--primary-color);
+}
+
+.gen-info .left main .bottom .photo label {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #0E80BF;
+    width: 107px;
+    height: 27px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    margin-left: 19px;
+}
+
+.gen-info .left main .bottom .photo  input[type="file"] {
+    visibility: hidden;
+    display: none;
+}
+
+.gen-info .left main .bottom aside label {
+    display: block;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    size: 16px;
+    line-height: 21px;
+    margin-bottom: 8px;
+}
+
+.gen-info .left main .bottom aside textarea {
+    resize: none;
+    width: 798px;
+    height: 103px;
+    border-radius: 4px;
+    border: 1px solid #BCBCBC;
+    background-color: var(--secondary-color);
+    padding-top: 13px;
+    padding-left: 16px;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    size: 16px;
+    line-height: 21px;
+    color: #00000060;
+}
+
+.gen-info .left main .bottom aside .email-label {
+    margin-top: 33px;
+}
+
+.gen-info .left main .bottom aside .number-label {
+    margin-top: 29px;
+}
+
+.gen-info .left main .bottom aside input {
+    width: 798px;
+    height: 48px;
+    padding-left: 16px;
+    border-radius: 4px;
+    border: 1px solid #BCBCBC;
+    color: #BCBCBC;
+    background-color: var(--secondary-color);
+    font-size: 16px;
+    font-family: var(--primary-font);
+    line-height: 21px;
+    font-weight: 400;
+    color: #00000060;
+}
+
+
+.gen-info .left main div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 82px;
+}
+
+.gen-info .left main div button {
+    width: 151px;
+    height: 48px;
+    background: #6B40E3;
+    border-radius: 4px;
+    border: 0px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--secondary-color);
+}
+
+.gen-info .right {
+    width: 822px;
+}
+
+.gen-info .right .top{
+    height: 900px;
+}
+.gen-info .right .bottom{
+    height: 180px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.gen-info .right .bottom div {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-image: url('./assets/sparkle.png');
+    margin-left: 78px;
+    margin-bottom: 44px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პირადი ინფო</title>
+    <link rel="stylesheet" href="./general-info.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+   <section class="gen-info">
+    <aside class="left">
+        <header>
+            <aside class="header-left">
+                <div>
+                    <img src="./assets/Vector.png" alt="Vector">
+                </div>
+            </aside>
+            <aside class="header-right">
+                <aside class="top">
+                    <h3>პირადი ინფო</h3>
+                    <h5>1/3</h5>
+                </aside>
+                <aside class="bottom">
+                    <hr>
+                </aside>
+            </aside>
+        </header>
+        <main>
+            <aside class="top">
+                <aside>
+                    <label for="name">სახელი</label>
+                    <input type="text" id="name" placeholder="შეიყვანეთ თქვენი სახელი"> 
+                    <h6>მინიმუმ 2 ასო, ქართული ასოები</h6>
+                </aside>
+                <aside>
+                    <label for="surname">გვარი</label>
+                    <input type="text" id="surname" placeholder="შეიყვანეთ თქვენი გვარი">
+                    <h6>მინიმუმ 2 ასო, ქართული ასოები</h6>
+                </aside>
+            </aside>
+            <aside class="bottom">
+                <aside class="photo">
+                    <h4>პირადი ფოტოს ატვირთვა</h4>
+                    <label for="image">ატვირთვა</label>
+                    <input type="file" id="image">
+                </aside>
+                <aside>
+                    <label for="description">ჩემ შესახებ(არასავალდებულო)</label>
+                    <textarea id="description" cols="30" rows="10">ზოგადი ინფო შენ შესახებ</textarea>
+                </aside>
+            
+                <aside>
+                    <label class="email-label" for="email">ელ.ფოსტა</label>
+                    <input type="email" id="email" placeholder="შეიყვანეთ თქვენი ელ.ფოსტა">
+                    <h6>უნდა მთავრდებოდეს @redberry.ge-ით</h6>
+                </aside>
+                <aside>
+                    <label class="number-label" for="number">მობილურის ნომერი</label>
+                    <input type="string" id="number" placeholder="შეიყვანეთ თქვენი მობილურის ნომერი">
+                    <h6>უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</h6>
+                </aside>
+            </aside>
+            <div>
+                <button>შემდეგი</button>
+            </div>
+        </main>
+    </aside>
+    <aside class="right">
+        <aside class="top"></aside>
+        <aside class="bottom">
+            <div></div>
+        </aside>
+    </aside>
+   </section>
+</body>
+</html>
