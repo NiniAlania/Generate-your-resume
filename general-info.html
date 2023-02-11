@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>პირადი ინფო</title>
     <link rel="stylesheet" href="./general-info.css">
+    <link rel="stylesheet" href="./resume.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
@@ -28,51 +29,102 @@
             </aside>
         </header>
         <main>
-            <aside class="top">
-                <aside>
-                    <label for="name">სახელი</label>
-                    <input type="text" id="name" placeholder="შეიყვანეთ თქვენი სახელი"> 
-                    <h6>მინიმუმ 2 ასო, ქართული ასოები</h6>
+            <form id="basic-form">
+                <aside class="top">
+                    <aside>
+                        <label for="name">სახელი</label>
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="შეიყვანეთ თქვენი სახელი" > 
+                            <span></span>
+                        </div>
+                        <h6>მინიმუმ 2 ასო, ქართული ასოები</h6>
+                    </aside>
+                    <aside>
+                        <label for="surname">გვარი</label>
+                        <div>
+                            <input type="text" id="surname" name="surname" placeholder="შეიყვანეთ თქვენი გვარი" >
+                            <span></span>
+                        </div>
+                        <h6>მინიმუმ 2 ასო, ქართული ასოები</h6>
+                    </aside>
                 </aside>
-                <aside>
-                    <label for="surname">გვარი</label>
-                    <input type="text" id="surname" placeholder="შეიყვანეთ თქვენი გვარი">
-                    <h6>მინიმუმ 2 ასო, ქართული ასოები</h6>
+                <aside class="bottom">
+                    <aside class="photo">
+                        <h4>პირადი ფოტოს ატვირთვა</h4>
+                        <div> 
+                            <label for="image">ატვირთვა</label>
+                            <input type="file" id="image" name="image">
+                            <span></span>
+                        </div>
+                    </aside>
+                    <aside>
+                        <label for="description">ჩემ შესახებ(არასავალდებულო)</label>
+                        <textarea id="description" cols="30" rows="10" name="description" placeholder="ზოგადი ინფო შენ შესახებ" maxlength="300"></textarea>
+                    </aside>
+                
+                    <aside>
+                        <label class="email-label" for="email">ელ.ფოსტა</label>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="შეიყვანეთ თქვენი ელ.ფოსტა">
+                            <span></span>
+                        </div>
+                        <h6>უნდა მთავრდებოდეს @redberry.ge-ით</h6>
+                    </aside>
+                    <aside>
+                        <label class="number-label" for="phone">მობილურის ნომერი</label>
+                        <div>
+                            <input type="tel" id="phone" name="phone" placeholder="შეიყვანეთ თქვენი მობილურის ნომერი">
+                            <span></span>
+                        </div>
+                        <h6>უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</h6>
+                    </aside>
                 </aside>
-            </aside>
-            <aside class="bottom">
-                <aside class="photo">
-                    <h4>პირადი ფოტოს ატვირთვა</h4>
-                    <label for="image">ატვირთვა</label>
-                    <input type="file" id="image">
-                </aside>
-                <aside>
-                    <label for="description">ჩემ შესახებ(არასავალდებულო)</label>
-                    <textarea id="description" cols="30" rows="10">ზოგადი ინფო შენ შესახებ</textarea>
-                </aside>
-            
-                <aside>
-                    <label class="email-label" for="email">ელ.ფოსტა</label>
-                    <input type="email" id="email" placeholder="შეიყვანეთ თქვენი ელ.ფოსტა">
-                    <h6>უნდა მთავრდებოდეს @redberry.ge-ით</h6>
-                </aside>
-                <aside>
-                    <label class="number-label" for="number">მობილურის ნომერი</label>
-                    <input type="string" id="number" placeholder="შეიყვანეთ თქვენი მობილურის ნომერი">
-                    <h6>უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</h6>
-                </aside>
-            </aside>
+            </form>
             <div>
                 <button>შემდეგი</button>
             </div>
         </main>
     </aside>
     <aside class="right">
-        <aside class="top"></aside>
+        <aside class="top">
+            <div class="display">
+                <div class="first-part">
+                    <aside class="first-page-information">
+                        <aside class="fullname">
+                            <h3 class="resume-name">ანზორ</h3>
+                            <h3 class="resume-surname">მუმლაძე</h3>
+                        </aside>
+                        <aside class="contact">
+                            <div>
+                                <span class="email-icon"></span>
+                                <h5 class="my-email">niniallania@redberry.ge</h5>
+                            </div>
+                            <div>
+                                <span class="mobile-icon"></span>
+                                <h5 class="mobile-number">+995558525300</h5>
+                            </div>
+                        </aside>
+                        <aside class="aboutMe">
+                            <h5>ჩემ შესახებ</h5>
+                            <p>ზაფლაიგჯალ ლიაჯფლაიჯფ ჯაფიალსგიაჯგალ ალი ჯალიფჯასფლსა ჯალსფიჯასგსლაიჯ ალიფჯასლგიაჯალი ჯაფლიაჯალი aifuahfiauh hafiuashsaifaf fa fa fasfsaafsfafafaaf aafafuh afi</p>
+                        </aside>
+                    </aside>
+                    <aside class="resume-photo">
+                        <img src="./assets/319365863_5725565094145258_2144989126924971448_n.jpeg" alt="">
+                    </aside>
+                </div>
+                <hr>
+            </div>
+        </aside>
         <aside class="bottom">
             <div></div>
         </aside>
     </aside>
    </section>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="./input-validation.js"></script>
+<script src="./general-info.js"></script>
 </html>

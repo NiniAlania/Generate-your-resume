@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/HelveticaNeue.ttc') format('truetype');
+  }
+:root {
+    --primary-color: black;
+    --resume-color: #F93B1D;
+    --my-font: 'MyFont';
+}
+
+/* .gen-info .right .top .display {
+    display: none;
+} */
+
+.gen-info .right .top .display .first-part {
+    display: flex;
+    height: 330px;
+}
+
+
+.gen-info .right .top .first-page-information .fullname {
+    display: flex;
+}
+
+.gen-info .right .top .first-page-information .fullname .resume-name {
+    margin-left: 80px;
+    margin-top: 68px;
+}
+.gen-info .right .top .first-page-information .fullname .resume-surname {
+    margin-left: 20px;
+    margin-top: 68px;
+}
+
+.gen-info .right .top .first-page-information .fullname h3 {
+    font-size: 34px;
+    font-family: var(--my-font);
+    font-style: normal;
+    color: var(--resume-color);
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.gen-info .right .top .first-page-information .contact div {
+    width: 208px;
+    height: 21px;
+    display: flex;
+
+}
+
+
+.gen-info .right .top .first-page-information .contact .email-icon {
+    background-image: url('./assets/email-icon.png');
+    width: 17.5px;
+    height: 17.5px;
+    position: absolute;
+    margin-left: 82px;
+    margin-top: 10px;
+}
+
+.gen-info .right .top .first-page-information .contact .mobile-icon {
+    background-image: url('./assets/phone-icon.png');
+    width: 17px;
+    height: 17px;
+    margin-left: 82.67px;
+    position: absolute;
+    margin-top: 20px;
+
+}
+
+.gen-info .right .top .first-page-information .contact h5 {
+   margin-left: 110px;
+   font-family: var(--my-font);
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 21.47px;
+   color: var(--primary-color);
+}
+
+.gen-info .right .top .first-page-information .contact .mobile-number {
+    margin-top: 18px;
+}
+
+.gen-info .right .top .first-page-information .contact .my-email {
+
+    margin-top: 7px;
+}
+
+.gen-info .right .top .first-page-information .aboutMe h5 {
+    margin-top: 50px;
+    margin-left: 80px;
+    font-family: var(--my-font);
+    font-size: 18px;
+    color: var(--resume-color);
+    font-weight: 700;
+    line-height: 21.98px;
+}
+
+.gen-info .right .top .first-page-information .aboutMe p {
+    margin-left: 80px;
+    width: 432px;
+    font-family: var(--my-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--primary-color);
+    text-transform: lowercase;
+    font-style: normal;
+    word-wrap: break-word;
+    position: absolute;
+    text-align: justify;
+}
+
+.gen-info .right .top .display hr {
+    margin: 13px 82px;
+}
+
+.gen-info .right .top .resume-photo img {
+    border-radius: 50%;
+    width: 246px;
+    height: 246px;
+    margin-top: 48px;
+    margin-left: 140px;
+}

@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'MyFont';
     src: url('fonts/HelveticaNeue.ttc') format('truetype');
-  }
+}
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #FFFFFF;
@@ -115,8 +115,16 @@ body {
     background-color: var(--secondary-color);
     border: 1px solid #BCBCBC;
     padding-left: 16px;
+    position: absolute;
+    outline: none;
+    color: var(--primary-color);
 
 }
+
+.gen-info .left main .top aside input::placeholder {
+    color: #BCBCBC;
+}
+
 
 .gen-info .left main .top aside h6,
 .gen-info .left main .bottom aside h6 {
@@ -130,7 +138,8 @@ body {
 
 .gen-info .left main .bottom .photo {
     margin: 54px 0px ;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .gen-info .left main .bottom .photo h4 {
@@ -139,6 +148,11 @@ body {
     font-size: 18px;
     line-height: 21.98px;
     color: var(--primary-color);
+    width: 247px;
+}
+
+.gen-info .left main .bottom .photo div {
+   width: 100px;
 }
 
 .gen-info .left main .bottom .photo label {
@@ -155,13 +169,21 @@ body {
     height: 27px;
     border-radius: 4px;
     color: #FFFFFF;
-    margin-left: 19px;
+    margin-bottom: 30px;
 }
+
 
 .gen-info .left main .bottom .photo  input[type="file"] {
     visibility: hidden;
     display: none;
 }
+
+/* .gen-info .left main .bottom .photo span {
+    width: 16.5px;
+    height: 16.5px;
+    margin-bottom: 35px;
+    position: absolute;
+} */
 
 .gen-info .left main .bottom aside label {
     display: block;
@@ -185,7 +207,12 @@ body {
     font-weight: 400;
     size: 16px;
     line-height: 21px;
-    color: #00000060;
+    color: var(--primary-color);
+    outline: none;
+}
+
+.gen-info .left main .bottom aside textarea::placeholder {
+    color: #BCBCBC;
 }
 
 .gen-info .left main .bottom aside .email-label {
@@ -202,13 +229,18 @@ body {
     padding-left: 16px;
     border-radius: 4px;
     border: 1px solid #BCBCBC;
-    color: #BCBCBC;
     background-color: var(--secondary-color);
     font-size: 16px;
     font-family: var(--primary-font);
     line-height: 21px;
     font-weight: 400;
-    color: #00000060;
+    color: var(--primary-color);
+    position: absolute;
+    outline: none;
+}
+
+.gen-info .left main .bottom aside input::placeholder {
+    color: #BCBCBC;
 }
 
 
@@ -233,6 +265,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: var(--secondary-color);
+    margin-bottom: 65px;
 }
 
 .gen-info .right {
@@ -254,6 +287,50 @@ body {
     width: 42px;
     height: 42px;
     background-image: url('./assets/sparkle.png');
-    margin-left: 78px;
     margin-bottom: 44px;
+    margin-left: 78px;
+}
+
+
+.gen-info .left main input.error {
+    border: 1px solid #EF5050 !important;
+}
+
+.red {
+    color:  #EF5050 !important;
+}
+
+.gen-info .left main input.valid{
+    border: 1px solid #98E37E !important;
+
+}
+
+
+.gen-info .left main aside div {
+    margin:  0px;
+    height: 56px;
+}
+
+.gen-info .left main aside div span {
+    display: none;
+}
+
+.gen-info .left main aside div span.valid {
+    background-image: url('./assets/green-icon.png');
+    display: inline;
+    width: 17px;
+    height: 17px;
+    margin-bottom: 17px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.gen-info .left main aside div span.error {
+    background-image: url('./assets/red-icon.png');
+    display: inline;
+    width: 21px;
+    height: 18.75px;
+    margin-right: -33px;
+    margin-bottom: 14.6px;
+    position: relative;
 }
