@@ -305,6 +305,10 @@ body {
 
 }
 
+.gen-info .left main textarea.valid{
+    border: 1px solid #98E37E !important;
+
+}
 
 .gen-info .left main aside div {
     margin:  0px;
