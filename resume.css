@@ -14,7 +14,7 @@
 
 .gen-info .right .top .display .first-part {
     display: flex;
-    height: 330px;
+    height: 350px;
 }
 
 
@@ -90,8 +90,15 @@
     display: none;
 }
 
+.gen-info .right .top .first-page-information .aboutMe {
+    margin-top: 30px;
+    width: 432px;
+    height: 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 .gen-info .right .top .first-page-information .aboutMe h5 {
-    margin-top: 50px;
     margin-left: 80px;
     font-family: var(--my-font);
     font-size: 18px;
@@ -112,13 +119,15 @@
     text-transform: lowercase;
     font-style: normal;
     word-wrap: break-word;
-    position: absolute;
     text-align: justify;
     display: none;
+    margin-top: 0px;
 }
 
 .gen-info .right .top .display hr {
     margin: 13px 82px;
+    width: 662px;
+    flex-grow: 1;
 }
 
 .gen-info .right .top .resume-photo img {
@@ -126,6 +135,6 @@
     width: 246px;
     height: 246px;
     margin-top: 48px;
-    margin-left: 140px;
+    margin-left: 100px;
     display: none;
 }

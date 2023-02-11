@@ -51,7 +51,6 @@ function toogleFileValidation(element, valid) {
 }
 
 function tootleDescriptionValidation(element, valid) {
-    console.log(element);
     if (!valid) {
         element.classList.remove("valid");
     } else {
