@@ -29,6 +29,7 @@ class Form {
                 this.data['name'] = value;
                 this.resumeName.style.display ="inline";
                 this.resumeName.innerHTML = value;
+                this.store();
             } else {
                 this.resumeName.style.display ="none";
             }
@@ -44,6 +45,7 @@ class Form {
                 this.data['surname'] = value;
                 this.resumeSurname.style.display = "inline";
                 this.resumeSurname.innerHTML = value;
+                this.store();
             } else {
                 this.resumeSurname.style.display ="none";
             }
@@ -56,18 +58,19 @@ class Form {
             toogleFileValidation(event.target, valid);
 
             if (valid) {
-                this.data['image'] = value[0];
-
                 const reader = new FileReader()
 
                 const resumeImage = this.resumeImage;
+                const data = this.data;
 
                 reader.onloadend = function () {
+                    data['image'] = reader.result;
                     resumeImage.style.display = "inline";
                     resumeImage.src = reader.result;
                 };
 
                 reader.readAsDataURL(value[0]);
+                this.store();
             } else {
                 this.resumeImage.src = "";
             }
@@ -84,7 +87,7 @@ class Form {
                 this.resumeDescriptionTitle.style.display = "inline";
                 this.resumeDescription.style.display = "inline";
                 this.resumeDescription.innerHTML = value;
-
+                this.store();
             } else {
                 this.resumeDescriptionTitle.style.display = "none";
                 this.resumeDescription.style.display = "none";
@@ -102,6 +105,7 @@ class Form {
                 this.resumeEmailIcon.style.display = "inline";
                 this.resumeEmail.style.display = "inline";
                 this.resumeEmail.innerHTML = value;
+                this.store();
             } else {
                 this.resumeEmailIcon.style.display = "none";
                 this.resumeEmail.style.display = "none";
@@ -119,10 +123,51 @@ class Form {
                 this.resumeMobileIcon.style.display = "inline";
                 this.resumeMobile.style.display = "inline";
                 this.resumeMobile.innerHTML = value;
+                this.store();
             } else {
                 this.resumeMobileIcon.style.display = "none";
                 this.resumeMobile.style.display = "none";
             }
         });
+    }
+
+    init() {
+        this.name.value = this.data.name  || '';
+        this.resumeName.style.display = "inline";
+        this.resumeName.innerHTML = this.data.name || '';
+        this.surname.value = this.data.surname || '';
+        this.resumeSurname.style.display = "inline";
+        this.resumeSurname.innerHTML = this.data.surname || '';
+        this.resumeImage.style.display = "inline";
+        this.resumeImage.src = this.data.image || '';
+        this.description.value = this.data.description || '';
+        this.resumeDescriptionTitle.style.display = "inline";
+        this.resumeDescription.style.display = "inline"; 
+        this.resumeDescription.innerHTML = this.data.description || '';
+        this.email.value = this.data.email || '';
+        this.resumeEmailIcon.style.display = "inline";
+        this.resumeEmail.style.display = "inline";
+        this.resumeEmail.innerHTML = this.data.email || '';
+        this.phone.value = this.data.phone || '';
+        this.resumeMobileIcon.style.display = "inline";
+        this.resumeMobile.style.display = "inline";
+        this.resumeMobile.innerHTML = this.data.phone || '';
+     }
+
+    store() {
+        sessionStorage.setItem("cvData", JSON.stringify(this.data));
+    }
+
+    load() {
+        const data = JSON.parse(sessionStorage.cvData);
+        this.data = data;
+        if (Object.keys(this.data).length > 0) {
+            this.init();
+        }
+    }
+    
+    clear() {
+        this.data = {};
+        this.store();
     }
 }
