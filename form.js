@@ -65,6 +65,7 @@ class Form {
 
                 reader.onloadend = function () {
                     data['image'] = reader.result;
+                    data['imageFile'] = value[0];
                     resumeImage.style.display = "inline";
                     resumeImage.src = reader.result;
                 };
@@ -152,7 +153,7 @@ class Form {
         this.resumeMobileIcon.style.display = "inline";
         this.resumeMobile.style.display = "inline";
         this.resumeMobile.innerHTML = this.data.phone || '';
-     }
+    }
 
     store() {
         sessionStorage.setItem("cvData", JSON.stringify(this.data));
@@ -161,13 +162,37 @@ class Form {
     load() {
         const data = JSON.parse(sessionStorage.cvData);
         this.data = data;
+        if ((this.data.image || '').length > 0) {
+            this.data['imageFile'] = this._dataURLtoFile(this.data.image);
+        }
         if (Object.keys(this.data).length > 0) {
             this.init();
         }
+    }
+
+    _dataURLtoFile(dataUrl) {
+        const arr = dataUrl.split(',');
+        const mime = arr[0].match(/:(.*?);/)[1];
+        const bstr = atob(arr[1]);
+        let n = bstr.length;
+        const u8arr = new Uint8Array(n);
+            
+        while(n--){
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        
+        return new File([u8arr], 'image', {type:mime});
     }
     
     clear() {
         this.data = {};
         this.store();
+    }
+
+    submit() {
+        // TODO change with read data
+        postCV(getTest(this.data.imageFile), (data) => {
+            console.log(data);
+        })
     }
 }
