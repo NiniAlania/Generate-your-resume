@@ -180,11 +180,15 @@
                         <h6>მინიმუმ 2 სიმბოლო</h6>
                     </aside>
                     <aside class="middle-education">
-                        <aside class="start-date-education">
-                            <label for="input-start-date-edu" id="label-start-date-edu">დაწყების რიცხვი</label>
-                            <div>
-                                <input type="date" id="input-start-date-edu" class="input-start-date-edu">
-                            </div>
+                        <aside class="status-education">
+                            <form action="#" class="form">
+                                <label for="input-status" id="input-status">დაწყების რიცხვი</label>
+                                <select name="languages" id="" class="input-status">
+                                    <option value="js">JS</option>
+                                    <option value="python">python</option>
+                                    <option value="C++">C++</option>
+                                </select>
+                            </form>
                         </aside>
                         <aside class="end-date">
                             <label for="input-end-date-edu" id="label-end-date-edu">დამთავრების რიცხვი</label>
@@ -264,10 +268,10 @@
                         <section class="resume-education-block">
                             <div class="resume-school">
                                 <h6 class="resume-school-name"></h6>
+                                <span class="secondComma">,</span>
+                                <h6 class="status"></h6>
                             </div>
                             <div class="school-date">
-                                <h6 class="resume-start-date-edu"></h6>
-                                <span class="def">-</span>
                                 <h6 class="resume-end-date-edu"></h6>
                             </div>
                             <p class="school-description"></p>

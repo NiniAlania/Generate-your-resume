@@ -57,6 +57,9 @@ backButtonThird.addEventListener("click", () => {
   sessionStorage.setItem("page", 2);
 })
 
+finishButton.addEventListener("click", () => {
+  education.style.display = "none";
+})
 
 const form = new Form();
 

@@ -16,8 +16,10 @@ class Form {
         this.resumeMobile= document.querySelector(".mobile-number");
         this.phone = document.querySelector("#phone");
         this.addExpButton = document.querySelector(".add-exp");
+        this.addEduButton = document.querySelector(".add-education");
         this.data = {};
         this.totalExperiences = 1;
+        this.totalEducations = 1;
     }
 
     validate() {
@@ -138,6 +140,13 @@ class Form {
             this.addWorkListeners();
         });
         this.addWorkListeners();
+
+        this.addEduButton.addEventListener("click", () => {
+            this.addEducation();
+            this.addSchoolListeners();
+        });
+        this.addSchoolListeners();
+
     }
 
     addWork() {
@@ -178,7 +187,7 @@ class Form {
         <label for="work-description" id="work-description-label">აღწერა</label>
         <textarea id="work-description" class="work-description" cols="30" rows="10" placeholder="გთხოვთ, შეიყვანოთ საქმიანობის აღწერა"></textarea>
     </aside>`;
-        document.querySelector(".work").innerHTML += work;
+        document.querySelector(".work").insertAdjacentHTML('beforeend', work);
         const displayWork = `<hr>
         <div class="resume-employer">
         <h6 class="resume-employer-position"></h6>
@@ -191,8 +200,103 @@ class Form {
         <h6 class="resume-end-date"></h6>
     </div>
     <p class="resume-description"></p>`;
-        document.querySelector(".resume-experience-block").innerHTML += displayWork;
+        document.querySelector(".resume-experience-block").insertAdjacentHTML('beforeend', displayWork);
         this.totalExperiences += 1; 
+    }
+
+    addEducation() {
+        const school= ` <hr>
+        <aside class="top-education">
+        <label for="education-input" class="education-label">სასწავლებელი</label>
+        <div>
+            <input type="text" id="education-input" class="education-input" placeholder="სასწავლებელი" >
+            <span></span>
+        </div>
+        <h6>მინიმუმ 2 სიმბოლო</h6>
+    </aside>
+    <aside class="middle-education">
+        <aside class="start-date-education">
+            <label for="input-start-date-edu" id="label-start-date-edu">დაწყების რიცხვი</label>
+            <div>
+                <input type="date" id="input-start-date-edu" class="input-start-date-edu">
+            </div>
+        </aside>
+        <aside class="end-date">
+            <label for="input-end-date-edu" id="label-end-date-edu">დამთავრების რიცხვი</label>
+            <div>
+                <input type="date" id="input-end-date-edu" class="input-end-date-edu">
+            </div>
+        </aside>
+    </aside>
+    <aside class="bottom-education">
+        <label for="education-description" id="education-description-label">განათლების აღწერა</label>
+        <textarea id="education-description" class="education-description" cols="30" rows="10" placeholder="გთხოვთ, შეიყვანოთ საქმიანობის აღწერა"></textarea>
+    </aside>`
+    document.querySelector(".school").insertAdjacentHTML('beforeend', school);
+
+    const displaySchool= ` <hr>
+    <div class="resume-school">
+    <h6 class="resume-school-name"></h6>
+</div>
+<div class="school-date">
+    <h6 class="resume-start-date-edu"></h6>
+    <span class="def">-</span>
+    <h6 class="resume-end-date-edu"></h6>
+</div>
+<p class="school-description"></p>
+    `
+    document.querySelector(".resume-education-block").insertAdjacentHTML('beforeend', displaySchool);
+    this.totalEducations += 1; 
+    };
+
+    addSchoolListeners() {
+        document.querySelectorAll(".education-input")[this.totalEducations-1].addEventListener("keyup", (event) => {
+            const value = event.target.value;
+            const valid = hasValidLength(value, 2);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".secondComma")[this.totalEducations-1].style.display="inline";
+                document.querySelectorAll(".resume-school-name")[this.totalEducations-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".secondComma")[this.totalEducations-1].style.display="none";
+                document.querySelectorAll(".resume-school-name")[this.totalEducations-1].innerHTML = "";
+            }
+        });
+
+        document.querySelectorAll(".input-status")[this.totalEducations-1].addEventListener("change", (event) => {
+            const value = event.target.value;
+            const valid = isRequired(value);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".secondComma")[this.totalEducations-1].style.display="inline";
+                document.querySelectorAll("status")[this.totalEducations-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".secondComma")[this.totalEducations].style.display="none";
+                document.querySelectorAll(".status")[this.totalEducations-1].innerHTML = "";
+            }
+        });
+        
+        document.querySelectorAll(".input-end-date-edu")[this.totalEducations-1].addEventListener("change", (event) => {
+            const value = event.target.value;
+            const valid = isRequired(value);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".resume-end-date-edu")[this.totalEducations-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".resume-end-date-edu")[this.totalEducations-1].innerHTML = "";
+            }
+        });
+
+        document.querySelectorAll(".education-description")[this.totalEducations-1].addEventListener("keyup", (event) => {
+            const value = event.target.value;
+            const valid = hasValidLength(value, 2);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".school-description")[this.totalEducations-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".school-description")[this.totalEducations-1].innerHTML = "";
+            }
+        });
     }
 
     addWorkListeners() {
@@ -255,6 +359,9 @@ class Form {
             }
         });
     }
+
+    
+
 
     init() {
         this.name.value = this.data.name  || '';

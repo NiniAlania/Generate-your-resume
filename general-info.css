@@ -22,6 +22,7 @@ body {
 
 .gen-info .left {
     width: 1098px;
+    height: 1080px;
     background-color: #F9F9F9;
 }
 
@@ -340,7 +341,6 @@ body {
 .gen-info .left .experience main .work .work-middle aside,
 .gen-info .left .education main .school .middle-education aside {
     display: grid;
-    grid-template-rows: 1fr 2fr;
 }
 
 .gen-info .left .experience main .work .work-middle aside label,
@@ -392,6 +392,31 @@ body {
     margin-bottom: 50px;
 }
 
+.gen-info .left .education main .school .middle-education .form .status-education {
+    display: grid;
+}
+
+.gen-info .left .education main .school .middle-education .form {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.gen-info .left .education main .school .middle-education .form .input-status {
+    width: 371px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    margin-top: 2px;
+    padding: 14px;
+    outline: none;
+
+}
+
+.gen-info .left .education main .school .middle-education .form option {
+    margin-top: 30px;
+}
+
 .gen-info .left .experience main .top-button,
 .gen-info .left .education main .top-button-edu {
     margin-top: 45px;
@@ -437,6 +462,11 @@ body {
 
 .gen-info .left .education main .bottom-button-edu button {
     margin-top: 120px;
+}
+
+.gen-info .left .education main .bottom-button-edu .finish-button-3rd {
+    width: 151px;
+    height: 48px;
 }
 
 .gen-info .right {
@@ -530,6 +560,7 @@ body {
 }
 
 
+
 .gen-info .left main input.error {
     border: 1px solid #EF5050 !important;
 }
@@ -555,6 +586,7 @@ body {
 
 .gen-info .left main aside div span {
     display: none;
+    margin-top: 15px;
 }
 
 .gen-info .left main aside div span.valid {
@@ -565,6 +597,7 @@ body {
     margin-bottom: 17px;
     margin-right: 10px;
     position: relative;
+    margin-left: -22px;
 }
 
 .gen-info .left main aside div span.error {
