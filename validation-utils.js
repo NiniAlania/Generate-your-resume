@@ -38,9 +38,13 @@ function toogleValidation(element, valid) {
         element.nextElementSibling.classList.add(valid ? "valid" : "error");
     }
     if (valid) {
-        element.parentElement.previousElementSibling.classList.remove("red");
+        if (element.parentElement.previousElementSibling) {
+            element.parentElement.previousElementSibling.classList.remove("red");
+        }
     } else {
-        element.parentElement.previousElementSibling.classList.add("red");
+        if (element.parentElement.previousElementSibling) {
+            element.parentElement.previousElementSibling.classList.add("red");
+        }
     }
 }
 

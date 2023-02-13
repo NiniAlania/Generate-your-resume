@@ -1,6 +1,6 @@
 const API_URL = "https://resume.redberryinternship.ge/api";
 
-function getDegreese(callback) {
+function getDegrees(callback) {
     fetch(`${API_URL}/degrees`)
   .then((response) => response.json())
   .then((data) => callback(data));
@@ -10,29 +10,9 @@ function getDegreese(callback) {
 // })
 
 function postCV(data, callback) {
-    let formData = new FormData();
-
-    function flattenObject(data, parentKey) {
-        for (let key in data) {
-          if (Array.isArray(data[key])) {
-            data[key].forEach((value, index) => {
-              flattenObject(value, `${key}[${index}]`);
-            });
-          } else if (parentKey !== '' && typeof data[key] === 'object') {
-            flattenObject(data[key], `${parentKey}[${key}]`);
-          } else if (parentKey !== '') {
-            formData.append(`${parentKey}[${key}]`, data[key]);
-          } else {
-            formData.append(`${key}`, data[key]);
-          }
-        }
-    }
-  
-    flattenObject(data, '');
-
     fetch(`${API_URL}/cvs/`, {
         method: 'POST',
-        body: formData,
+        body: data,
         headers: {
             'Accept': 'application/json',
         },

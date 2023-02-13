@@ -6,8 +6,14 @@ const workExperience = document.querySelector(".experience");
 const education = document.querySelector(".education");
 const nextButtonSecond = document.querySelector(".next-button-2nd");
 const backButtonSecond = document.querySelector(".back-button-2nd");
-const finishButton = document.querySelector(".next-button-3rd");
+const finishButton = document.querySelector(".finish-button-3rd");
 const backButtonThird = document.querySelector(".back-button-3rd");
+const leftSide = document.querySelector(".left");
+const rightSide = document.querySelector(".right")
+const sparkle = document.querySelector(".sparkle");
+const vectorContainer = document.querySelector(".vector-container");
+const popUp =document.querySelector(".pop-up");
+const x= document.querySelector(".pop-up-close");
 
 const currentPage = sessionStorage.getItem("page") || 1;
 
@@ -28,9 +34,9 @@ if(currentPage == 1 ) {
 vector.forEach(function(vector) {
   vector.addEventListener("click", () => {
     form.clear();
-    location.href= "index.html";
     sessionStorage.removeItem("page");
-  })
+    location.href= "index.html";
+    })
 })
 
 nextButtonFirstPg.addEventListener("click", () => {
@@ -58,13 +64,37 @@ backButtonThird.addEventListener("click", () => {
 })
 
 finishButton.addEventListener("click", () => {
-  education.style.display = "none";
+  leftSide.style.display = "none";
+  rightSide.style.border = "1px solid black";
+  rightSide.style.marginTop = "54px";
+  sparkle.style.marginBottom =  "350px";
+  vectorContainer.style.display = " block";
+  postCV(form.toFormData(), (data) => {
+    console.log(data);
+    form.clear();
+    sessionStorage.removeItem("page");
+    popUp.style.display = "block";
+  });
+
+});
+
+x.addEventListener("click", () => {
+  popUp.style.display = "none";
+})
+
+vectorContainer.addEventListener("click", () => {
+  form.clear();
+  sessionStorage.removeItem("page");
+  location.href= "index.html";
 })
 
 const form = new Form();
 
-form.validate();
-form.load();
+getDegrees((data) => {
+  form.degrees = data;
+  form.validate();
+  form.load();
+});
 
 function getTest(image) { 
     return {

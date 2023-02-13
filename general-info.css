@@ -41,12 +41,30 @@ body {
     margin-top: 45px;
     margin-left: 48px;
     border-radius: 50%;
-    background: #FFFFFF;
+    background: #F9F9F9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.vector-container {
+    width: 40px;
+    height: 40px;
+    margin-left: -500px;
+    border-radius: 50%;
+    background: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.vector {
+    width: 9.21px;
+    height: 16px;
+    margin-left: 13px;
+    margin-top: 10px;
+}
 .gen-info .left header .header-left img {
     width: 9.21px;
     height: 16px;
@@ -484,11 +502,11 @@ body {
 }
 
 .gen-info .right .bottom div {
-    position: absolute;
+    /* position: absolute; */
     width: 42px;
     height: 42px;
     background-image: url('./assets/sparkle.png');
-    margin-bottom: 44px;
+    margin-bottom: 100px;
     margin-left: 78px;
 }
 
@@ -506,12 +524,19 @@ body {
     font-style: normal;
 }
 
-.gen-info .right .second-part .resume-experience .resume-employer {
+.gen-info .right .second-part .resume-experience .resume-employer,
+.gen-info .right .third-part .resume-school {
     display: flex;
 }
 
-.gen-info .right .second-part .resume-experience .resume-employer span {
+.gen-info .right .second-part .resume-experience .resume-employer span,
+.gen-info .right .third-part .resume-school span {
     margin-top: 12px;
+}
+
+.secondComma {
+    display: none;
+    margin-right: 5px;
 }
 
 .gen-info .right .second-part .resume-experience h6 {
@@ -610,3 +635,37 @@ body {
     position: relative;
 }
 
+.pop-up {
+    width: 427px;
+    height: 167px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 43px;
+    margin-bottom: 1000px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+}
+
+.pop-up h5 {
+    padding: 0px 30px 4px 30px;
+}
+
+.pop-up .pop-up-close {
+    background-image: url(./assets/x.png);
+    width: 14px;
+    height: 14px;
+    display: block;
+    margin-left: 400px;
+    margin-top: 10px;
+    
+}

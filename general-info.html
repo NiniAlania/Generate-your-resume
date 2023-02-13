@@ -15,8 +15,8 @@
         <aside class="personal-info">
             <header>
                 <aside class="header-left">
-                    <div>
-                        <img class="vector" src="./assets/Vector.png" alt="Vector">
+                    <div class="vector">
+                        <img src="./assets/Vector.png" alt="Vector">
                     </div>
                 </aside>
                 <aside class="header-right">
@@ -89,8 +89,8 @@
          <aside class="experience">
             <header>
                 <aside class="header-left">
-                    <div>
-                        <img class="vector" src="./assets/Vector.png" alt="Vector">
+                    <div class="vector">
+                        <img src="./assets/Vector.png" alt="Vector">
                     </div>
                 </aside>
                 <aside class="header-right">
@@ -155,8 +155,8 @@
          <aside class="education">
             <header>
                 <aside class="header-left">
-                    <div>
-                        <img class="vector" src="./assets/Vector.png" alt="Vector">
+                    <div class="vector">
+                        <img  src="./assets/Vector.png" alt="Vector">
                     </div>
                 </aside>
                 <aside class="header-right">
@@ -181,14 +181,11 @@
                     </aside>
                     <aside class="middle-education">
                         <aside class="status-education">
-                            <form action="#" class="form">
+                            <div class="form">
                                 <label for="input-status" id="input-status">დაწყების რიცხვი</label>
                                 <select name="languages" id="" class="input-status">
-                                    <option value="js">JS</option>
-                                    <option value="python">python</option>
-                                    <option value="C++">C++</option>
                                 </select>
-                            </form>
+                            </div>
                         </aside>
                         <aside class="end-date">
                             <label for="input-end-date-edu" id="label-end-date-edu">დამთავრების რიცხვი</label>
@@ -215,6 +212,9 @@
          </aside>
     </aside>
     <aside class="right">
+        <div class="vector-container">
+            <img class="vector" src="./assets/Vector.png" alt="Vector">
+        </div>
         <aside class="top">
             <div class="display">
                 <section class="first-part">
@@ -254,7 +254,7 @@
                             </div>
                             <div class="experience-date">
                                 <h6 class="resume-start-date"></h6>
-                                <span class="def">-</span>
+                                <span class="def"> -</span>
                                 <h6 class="resume-end-date"></h6>
                             </div>
                             <p class="resume-description"></p>
@@ -278,14 +278,17 @@
                         </section>
                     </aside>
                 </section>
-
             </div>
         </aside>
         <aside class="bottom">
-            <div></div>
+            <div class="sparkle"></div>
         </aside>
     </aside>
    </section>
+   <div class="pop-up">
+    <span class="pop-up-close"></span>
+    <h5>რეზიუმე წარმატებით გაიგზავნა 🎉</h5>
+   </div>
 </body>
 <script src="./validation-utils.js"></script>
 <script src="./http-utils.js"></script>
