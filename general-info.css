@@ -272,11 +272,13 @@ body {
     display: none;
 }
 
-.gen-info .left .experience main .work .work-top {
+.gen-info .left .experience main .work .work-top,
+.gen-info .left .education main .school .top-education{
     margin-top: 60px;
 }
 
-.gen-info .left .experience main .work .work-top label {
+.gen-info .left .experience main .work .work-top label,
+.gen-info .left .education main .school .top-education label{
     font-family: var(--primary-font);
     color: var(--primary-color);
     font-weight: 500;
@@ -285,14 +287,16 @@ body {
 }
 
 
-.gen-info .left .experience main .work .work-top div {
+.gen-info .left .experience main .work .work-top div,
+.gen-info .left .education main .school .top-education div {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 5px;
 }
 
-.gen-info .left .experience main .work .work-top div input {
+.gen-info .left .experience main .work .work-top div input, 
+.gen-info .left .education main .school .top-education div input {
     width: 798px;
     height: 48px;
     border-radius: 4px;
@@ -302,7 +306,8 @@ body {
     outline: none;
 }
 
-.gen-info .left .experience main .work .work-top div input::placeholder {
+.gen-info .left .experience main .work .work-top div input::placeholder,
+.gen-info .left .education main .school .top-education div input::placeholder {
     font-family: var(--primary-font);
     font-weight: 400;
     size: 16px;
@@ -310,7 +315,8 @@ body {
 }
 
 
-.gen-info .left .experience main .work .work-top h6 {
+.gen-info .left .experience main .work .work-top h6,
+.gen-info .left .education main .school .top-education h6 {
     margin-top: 5px;
     font-family: var(--primary-font);
     font-weight: 300;
@@ -323,18 +329,22 @@ body {
     margin-top: 25px;
 }
 
-.gen-info .left .experience main .work .work-middle {
+.gen-info .left .experience main .work .work-middle,
+.gen-info .left .education main .school .middle-education
+ {
     display: flex;
     gap: 56px;
     margin-top: 20px;
 }
 
-.gen-info .left .experience main .work .work-middle aside {
+.gen-info .left .experience main .work .work-middle aside,
+.gen-info .left .education main .school .middle-education aside {
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
 
-.gen-info .left .experience main .work .work-middle aside label {
+.gen-info .left .experience main .work .work-middle aside label,
+.gen-info .left .education main .school .middle-education aside label {
     font-family: var(--primary-font);
     font-weight: 500;
     font-size: 16px;
@@ -343,7 +353,8 @@ body {
     height: 21px;
 }
 
-.gen-info .left .experience main .work .work-middle aside input {
+.gen-info .left .experience main .work .work-middle aside input,
+.gen-info .left .education main .school .middle-education aside input {
     width: 371px;
     height: 48px;
     border-radius: 4px;
@@ -354,12 +365,14 @@ body {
 
 }
 
-.gen-info .left .experience main .work .work-bottom {
+.gen-info .left .experience main .work .work-bottom,
+.gen-info .left .education main .school .bottom-education {
     display: grid;
     margin-top: 33px;
 }
 
-.gen-info .left .experience main .work .work-bottom label {
+.gen-info .left .experience main .work .work-bottom label,
+.gen-info .left .education main .school .bottom-education label {
     margin-bottom: 8px;
     font-family: var(--primary-font);
     font-weight: 500;
@@ -368,7 +381,8 @@ body {
 
 }
 
-.gen-info .left .experience main .work .work-bottom textarea {
+.gen-info .left .experience main .work .work-bottom textarea,
+.gen-info .left .education main .school .bottom-education textarea {
     resize: none;
     outline: none;
     width: 798px;
@@ -378,11 +392,13 @@ body {
     margin-bottom: 50px;
 }
 
-.gen-info .left .experience main .top-button {
+.gen-info .left .experience main .top-button,
+.gen-info .left .education main .top-button-edu {
     margin-top: 45px;
 }
 
-.gen-info .left .experience main .top-button button {
+.gen-info .left .experience main .top-button button,
+.gen-info .left .education main .top-button-edu button{
     width: 280px;
     height: 48px;
     border-radius: 4px;
@@ -396,13 +412,15 @@ body {
     margin-bottom: 114px;
 }
 
-.gen-info .left .experience main .bottom-button {
+.gen-info .left .experience main .bottom-button,
+.gen-info .left .education main .bottom-button-edu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 543px;
 }
 
-.gen-info .left .experience main .bottom-button button {
+.gen-info .left .experience main .bottom-button button,
+.gen-info .left .education main .bottom-button-edu button {
     width: 113px;
     height: 48px;
     background-color: #6B40E3;
@@ -415,6 +433,10 @@ body {
     color: var(--secondary-color);
     letter-spacing: 1.28px;
 
+}
+
+.gen-info .left .education main .bottom-button-edu button {
+    margin-top: 120px;
 }
 
 .gen-info .right {

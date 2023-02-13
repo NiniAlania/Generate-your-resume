@@ -140,12 +140,14 @@
 }
 
 
-.gen-info .right .second-part {
+.gen-info .right .second-part,
+.gen-info .right .third-part {
     margin-left: 80px;
     margin-top: 24px;
 }
 
-.gen-info .right .second-part .resume-experience h5 {
+.gen-info .right .second-part .resume-experience h5,
+.gen-info .right .third-part .resume-education h5 {
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 18px;
@@ -163,7 +165,8 @@
     display: none;
 }
 
-.gen-info .right .second-part .resume-experience h6 {
+.gen-info .right .second-part .resume-experience h6,
+.gen-info .right .third-part .resume-education .resume-school h6 {
     margin-top: 15px;
     font-family: var(--primary-font);
     font-style: normal;
@@ -178,15 +181,18 @@
     margin-left: 7px;
 }
 
-.gen-info .right .second-part .experience-date{
+.gen-info .right .second-part .experience-date, 
+.gen-info .right .third-part .resume-education .school-date{
     display: flex;
 }
 
-.gen-info .right .second-part .experience-date span {
+.gen-info .right .second-part .experience-date span,
+.gen-info .right .third-part .resume-education .school-date span {
     display: none;
 }
 
-.gen-info .right .second-part .experience-date h6{
+.gen-info .right .second-part .experience-date h6,
+.gen-info .right .third-part .resume-education .school-date h6{
     margin-top: 5px;
     margin-left: 0px;
     font-family: var(--primary-font);
@@ -198,7 +204,8 @@
     margin-bottom: 16px;
 }
 
-.gen-info .right .second-part p {
+.gen-info .right .second-part p, 
+.gen-info .right .third-part .resume-education p {
     width: 662px;
     height: 66px;
     left: 80px;
