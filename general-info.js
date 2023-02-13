@@ -1,9 +1,36 @@
-const vector = document.querySelector(".vector");
+const vector1 = document.querySelector(".vector1");
+const pageTitle = document.querySelector(".page-title");
+const button = document.querySelector(".button");
+const personalInfo = document.querySelector(".personal-info");
+const workExperience = document.querySelector(".experience");
+const vector2 = document.querySelector(".vector2");
 
+const currentPage = sessionStorage.getItem("page") || 1;
 
-vector.addEventListener("click", () => {
+if(currentPage == 1 ) {
+  workExperience.style.display = "none";
+  personalInfo.style.display ="inline";
+} else if (currentPage == 2 ) {
+  personalInfo.style.display = "none";
+  workExperience.style.display = "inline";
+}
+
+vector1.addEventListener("click", () => {
     form.clear();
-    location.href= "index.html"
+    location.href= "index.html";
+    sessionStorage.removeItem("page");
+})
+
+button.addEventListener("click", () => {
+ personalInfo.style.display = "none";
+ workExperience.style.display = "inline";
+ sessionStorage.setItem("page", 2);
+})
+
+vector2.addEventListener("click", () => {
+  personalInfo.style.display ="inline";
+  workExperience.style.display = "none";
+  sessionStorage.setItem("page", 1);
 })
 
 

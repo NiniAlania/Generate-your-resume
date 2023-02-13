@@ -124,7 +124,7 @@
     margin-top: 0px;
 }
 
-.gen-info .right .top .display hr {
+.gen-info .right .top .display .first-part-hr {
     margin: 13px 82px;
     width: 662px;
     flex-grow: 1;
@@ -137,4 +137,81 @@
     margin-top: 48px;
     margin-left: 100px;
     display: none;
+}
+
+
+.gen-info .right .second-part {
+    margin-left: 80px;
+    margin-top: 24px;
+}
+
+.gen-info .right .second-part .resume-experience h5 {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.98px;
+    color: #F93B1D;
+    font-style: normal;
+}
+
+.gen-info .right .second-part .resume-experience .resume-employer {
+    display: flex;
+}
+
+.gen-info .right .second-part .resume-experience .resume-employer span {
+    margin-top: 12px;
+    display: none;
+}
+
+.gen-info .right .second-part .resume-experience h6 {
+    margin-top: 15px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;    
+    line-height: 20px;
+    color: #1A1A1A;
+    margin-bottom: 0px;
+}
+
+.gen-info .right .second-part .resume-experience .second {
+    margin-left: 7px;
+}
+
+.gen-info .right .second-part .experience-date{
+    display: flex;
+}
+
+.gen-info .right .second-part .experience-date span {
+    display: none;
+}
+
+.gen-info .right .second-part .experience-date h6{
+    margin-top: 5px;
+    margin-left: 0px;
+    font-family: var(--primary-font);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #919191;
+    margin-bottom: 16px;
+}
+
+.gen-info .right .second-part p {
+    width: 662px;
+    height: 66px;
+    left: 80px;
+    top: 464px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: var(--primary-color);
+}
+
+.gen-info .right .second-part .second-part-hr {
+    width: 662px;
 }

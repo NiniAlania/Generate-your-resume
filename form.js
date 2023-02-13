@@ -15,12 +15,14 @@ class Form {
         this.resumeMobileIcon = document.querySelector(".mobile-icon");
         this.resumeMobile= document.querySelector(".mobile-number");
         this.phone = document.querySelector("#phone");
+        this.addExpButton = document.querySelector(".add-exp");
         this.data = {};
+        this.totalExperiences = 1;
     }
 
     validate() {
         this.name.addEventListener("keyup", (event) => {
-            const value = event.target.value;''
+            const value = event.target.value;
             const valid = hasValidLength(value, 2) && isGeorgian(value);
 
             toogleValidation(event.target, valid);
@@ -36,7 +38,7 @@ class Form {
         });
 
         this.surname.addEventListener("keyup", (event) => {
-            const value = event.target.value;''
+            const value = event.target.value;
             const valid = hasValidLength(value, 2) && isGeorgian(value);
 
             toogleValidation(event.target, valid);
@@ -81,7 +83,7 @@ class Form {
             const value = event.target.value;
             const valid = hasValidLength(value, 1);
 
-            tootleDescriptionValidation(event.target, valid);
+            toogleDescriptionValidation(event.target, valid);
 
             if (valid) {
                 this.data['description'] = value;
@@ -130,6 +132,128 @@ class Form {
                 this.resumeMobile.style.display = "none";
             }
         });
+
+        this.addExpButton.addEventListener("click", () => {
+            this.addWork();
+            this.addWorkListeners();
+        });
+        this.addWorkListeners();
+    }
+
+    addWork() {
+        const work = `<hr>
+        <aside class="work-top">
+        <aside class="position"> 
+            <label for="position-input" class="position-label">თანამდებობა</label>
+            <div>
+                <input type="text" id="position-input" class="position-input" placeholder="თანამდებობა" >
+                <span></span>
+            </div>
+            <h6>მინიმუმ 2 სიმბოლო</h6>
+        </aside>
+        <aside class="employer">
+            <label for="employer-input" class="employer-label">დამსაქმებელი</label>
+            <div>
+                <input type="text" id="employer-input" class="employer-input"  placeholder="დამსაქმებელი">
+                <span></span>
+            </div>
+            <h6>მინიმუმ 2 სიმბოლო</h6>
+        </aside>
+    </aside>
+    <aside class="work-middle">
+        <aside class="start-date">
+            <label for="input-start-date" id="label-start-date">დაწყების რიცხვი</label>
+            <div>
+                <input type="date" id="input-start-date" class="input-start-date">
+            </div>
+        </aside>
+        <aside class="end-date">
+            <label for="input-end-date" id="label-end-date">დამთავრების რიცხვი</label>
+            <div>
+                <input type="date" id="input-end-date" class="input-end-date">
+            </div>
+        </aside>
+    </aside>
+    <aside class="work-bottom">
+        <label for="work-description" id="work-description-label">აღწერა</label>
+        <textarea id="work-description" class="work-description" cols="30" rows="10" placeholder="გთხოვთ, შეიყვანოთ საქმიანობის აღწერა"></textarea>
+    </aside>`;
+        document.querySelector(".work").innerHTML += work;
+        const displayWork = `<hr>
+        <div class="resume-employer">
+        <h6 class="resume-employer-position"></h6>
+        <span class="comma">,</span>
+        <h6 class="second resume-employer-employer"></h6>
+    </div>
+    <div class="experience-date">
+        <h6 class="resume-start-date"></h6>
+        <span class="def">-</span>
+        <h6 class="resume-end-date"></h6>
+    </div>
+    <p class="resume-description"></p>`;
+        document.querySelector(".resume-experience-block").innerHTML += displayWork;
+        this.totalExperiences += 1; 
+    }
+
+    addWorkListeners() {
+        document.querySelectorAll(".position-input")[this.totalExperiences-1].addEventListener("keyup", (event) => {
+            const value = event.target.value;
+            const valid = hasValidLength(value, 2);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".comma")[this.totalExperiences-1].style.display="inline";
+                document.querySelectorAll(".resume-employer-position")[this.totalExperiences-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".comma")[this.totalExperiences-1].style.display="none";
+                document.querySelectorAll(".resume-employer-position")[this.totalExperiences-1].innerHTML = "";
+            }
+        });
+        document.querySelectorAll(".employer-input")[this.totalExperiences-1].addEventListener("keyup", (event) => {
+            const value = event.target.value;
+            const valid = hasValidLength(value, 2);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".comma")[this.totalExperiences-1].style.display="inline";
+                document.querySelectorAll(".resume-employer-employer")[this.totalExperiences-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".comma")[this.totalExperiences-1].style.display="none";
+                document.querySelectorAll(".resume-employer-employer")[this.totalExperiences-1].innerHTML = "";
+            }
+        });
+        document.querySelectorAll(".input-start-date")[this.totalExperiences-1].addEventListener("change", (event) => {
+            const value = event.target.value;
+            const valid = isRequired(value);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".def")[this.totalExperiences-1].style.display="inline";
+                document.querySelectorAll(".resume-start-date")[this.totalExperiences-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".def")[this.totalExperiences-1].style.display="none";
+                document.querySelectorAll(".resume-start-date")[this.totalExperiences-1].innerHTML = "";
+            }
+        });
+        document.querySelectorAll(".input-end-date")[this.totalExperiences-1].addEventListener("change", (event) => {
+            const value = event.target.value;
+            const valid = isRequired(value);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".def")[this.totalExperiences-1].style.display="inline";
+                document.querySelectorAll(".resume-end-date")[this.totalExperiences-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".def")[this.totalExperiences-1].style.display="none";
+                document.querySelectorAll(".resume-end-date")[this.totalExperiences-1].innerHTML = "";
+            }
+        });
+        document.querySelectorAll(".work-description")[this.totalExperiences-1].addEventListener("keyup", (event) => {
+            const value = event.target.value;
+            const valid = hasValidLength(value, 2);
+            toogleValidation(event.target, valid);
+            if(valid) {
+                document.querySelectorAll(".resume-description")[this.totalExperiences-1].innerHTML = value;
+            } else {
+                document.querySelectorAll(".resume-description")[this.totalExperiences-1].innerHTML = "";
+            }
+        });
     }
 
     init() {
@@ -142,15 +266,21 @@ class Form {
         this.resumeImage.style.display = "inline";
         this.resumeImage.src = this.data.image || '';
         this.description.value = this.data.description || '';
-        this.resumeDescriptionTitle.style.display = "inline";
+        if (this.description.value !== "") {
+            this.resumeDescriptionTitle.style.display = "inline";
+        }
         this.resumeDescription.style.display = "inline"; 
         this.resumeDescription.innerHTML = this.data.description || '';
         this.email.value = this.data.email || '';
-        this.resumeEmailIcon.style.display = "inline";
+        if (this.email.value !== '') {
+            this.resumeEmailIcon.style.display = "inline";
+        }
         this.resumeEmail.style.display = "inline";
         this.resumeEmail.innerHTML = this.data.email || '';
         this.phone.value = this.data.phone || '';
-        this.resumeMobileIcon.style.display = "inline";
+        if(this.phone.value !== '') {
+            this.resumeMobileIcon.style.display = "inline";
+        }
         this.resumeMobile.style.display = "inline";
         this.resumeMobile.innerHTML = this.data.phone || '';
     }

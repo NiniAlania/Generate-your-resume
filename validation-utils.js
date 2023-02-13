@@ -33,8 +33,10 @@ function isImage(value) {
 function toogleValidation(element, valid) {
     element.classList.remove(!valid ? "valid" : "error");
     element.classList.add(valid ? "valid" : "error");
-    element.nextElementSibling.classList.remove(!valid ? "valid" : "error");
-    element.nextElementSibling.classList.add(valid ? "valid" : "error");
+    if(element.nextElementSibling){
+        element.nextElementSibling.classList.remove(!valid ? "valid" : "error");
+        element.nextElementSibling.classList.add(valid ? "valid" : "error");
+    }
     if (valid) {
         element.parentElement.previousElementSibling.classList.remove("red");
     } else {
@@ -50,7 +52,7 @@ function toogleFileValidation(element, valid) {
     }
 }
 
-function tootleDescriptionValidation(element, valid) {
+function toogleDescriptionValidation(element, valid) {
     if (!valid) {
         element.classList.remove("valid");
     } else {

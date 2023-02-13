@@ -23,7 +23,6 @@ body {
 .gen-info .left {
     width: 1098px;
     background-color: #F9F9F9;
-
 }
 
 .gen-info .left header {
@@ -266,6 +265,156 @@ body {
     line-height: 20px;
     color: var(--secondary-color);
     margin-bottom: 65px;
+    letter-spacing: 1.28px;
+}
+
+.gen-info .left .experience {
+    display: none;
+}
+
+.gen-info .left .experience main .work .work-top {
+    margin-top: 60px;
+}
+
+.gen-info .left .experience main .work .work-top label {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+
+.gen-info .left .experience main .work .work-top div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.gen-info .left .experience main .work .work-top div input {
+    width: 798px;
+    height: 48px;
+    border-radius: 4px;
+    gap: 10px;
+    border: 1px solid #BCBCBC;
+    padding-left: 16px;
+    outline: none;
+}
+
+.gen-info .left .experience main .work .work-top div input::placeholder {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    size: 16px;
+    line-height: 21;
+}
+
+
+.gen-info .left .experience main .work .work-top h6 {
+    margin-top: 5px;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color:  #2E2E2E;
+}
+
+.gen-info .left .experience main .work .work-top .employer {
+    margin-top: 25px;
+}
+
+.gen-info .left .experience main .work .work-middle {
+    display: flex;
+    gap: 56px;
+    margin-top: 20px;
+}
+
+.gen-info .left .experience main .work .work-middle aside {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.gen-info .left .experience main .work .work-middle aside label {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--primary-color);
+    height: 21px;
+}
+
+.gen-info .left .experience main .work .work-middle aside input {
+    width: 371px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BCBCBC;
+    margin-top: 8px;
+    padding: 16px;
+    outline: none;
+
+}
+
+.gen-info .left .experience main .work .work-bottom {
+    display: grid;
+    margin-top: 33px;
+}
+
+.gen-info .left .experience main .work .work-bottom label {
+    margin-bottom: 8px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+}
+
+.gen-info .left .experience main .work .work-bottom textarea {
+    resize: none;
+    outline: none;
+    width: 798px;
+    height: 123px;
+    padding-left: 16px;
+    padding-top: 13px;
+    margin-bottom: 50px;
+}
+
+.gen-info .left .experience main .top-button {
+    margin-top: 45px;
+}
+
+.gen-info .left .experience main .top-button button {
+    width: 280px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #62A1EB;
+    border: 0px;
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+    size: 16px;
+    line-height: 19.54px;
+    margin-bottom: 114px;
+}
+
+.gen-info .left .experience main .bottom-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 543px;
+}
+
+.gen-info .left .experience main .bottom-button button {
+    width: 113px;
+    height: 48px;
+    background-color: #6B40E3;
+    border-radius: 4px;
+    border: 0px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    size: 16px;
+    line-height: 19.54px;
+    color: var(--secondary-color);
+    letter-spacing: 1.28px;
+
 }
 
 .gen-info .right {
@@ -289,6 +438,73 @@ body {
     background-image: url('./assets/sparkle.png');
     margin-bottom: 44px;
     margin-left: 78px;
+}
+
+.gen-info .right .second-part {
+    margin-left: 80px;
+    margin-top: 24px;
+}
+
+.gen-info .right .second-part .resume-experience h5 {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.98px;
+    color: #F93B1D;
+    font-style: normal;
+}
+
+.gen-info .right .second-part .resume-experience .resume-employer {
+    display: flex;
+}
+
+.gen-info .right .second-part .resume-experience .resume-employer span {
+    margin-top: 12px;
+}
+
+.gen-info .right .second-part .resume-experience h6 {
+    margin-top: 15px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;    
+    line-height: 20px;
+    color: #1A1A1A;
+    margin-bottom: 0px;
+}
+
+.gen-info .right .second-part .resume-experience .second {
+    margin-left: 7px;
+}
+
+.gen-info .right .second-part .experience-date{
+    display: flex;
+}
+
+.gen-info .right .second-part .experience-date h6{
+    margin-top: 5px;
+    margin-left: 0px;
+    font-family: var(--primary-font);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #919191;
+    margin-bottom: 16px;
+}
+
+.gen-info .right .second-part p {
+    width: 662px;
+    height: 66px;
+    left: 80px;
+    top: 464px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: var(--primary-color);
 }
 
 
@@ -338,3 +554,4 @@ body {
     margin-bottom: 14.6px;
     position: relative;
 }
+

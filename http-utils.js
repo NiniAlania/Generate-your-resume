@@ -5,6 +5,9 @@ function getDegreese(callback) {
   .then((response) => response.json())
   .then((data) => callback(data));
 }
+// getDegreese((data) => {
+//     console.log(data)
+// })
 
 function postCV(data, callback) {
     let formData = new FormData();
